@@ -1,0 +1,377 @@
+{
+  "class_name": "Model",
+  "config": {
+    "name": "NOISENET_Model",
+    "layers": [
+      {
+        "name": "noisenet_input_magnitude_spectrogram",
+        "class_name": "InputLayer",
+        "config": {
+          "batch_input_shape": [
+            null,
+            null,
+            null,
+            1
+          ],
+          "dtype": "float32",
+          "sparse": false,
+          "name": "noisenet_input_magnitude_spectrogram"
+        },
+        "inbound_nodes": []
+      },
+      {
+        "name": "noisenet_conv1",
+        "class_name": "Conv2D",
+        "config": {
+          "filters": 8,
+          "kernel_initializer": {
+            "class_name": "VarianceScaling",
+            "config": {
+              "scale": 2,
+              "mode": "fan_in",
+              "distribution": "normal",
+              "seed": null
+            }
+          },
+          "kernel_regularizer": null,
+          "kernel_constraint": null,
+          "kernel_size": [
+            3,
+            3
+          ],
+          "strides": [
+            1,
+            1
+          ],
+          "padding": "same",
+          "data_format": "channels_last",
+          "dilation_rate": [
+            1,
+            1
+          ],
+          "activation": "relu",
+          "use_bias": true,
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "bias_constraint": null,
+          "name": "noisenet_conv1",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "noisenet_input_magnitude_spectrogram",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "noisenet_dilated_c1",
+        "class_name": "Conv2D",
+        "config": {
+          "filters": 8,
+          "kernel_initializer": {
+            "class_name": "VarianceScaling",
+            "config": {
+              "scale": 2,
+              "mode": "fan_in",
+              "distribution": "normal",
+              "seed": null
+            }
+          },
+          "kernel_regularizer": null,
+          "kernel_constraint": null,
+          "kernel_size": [
+            3,
+            3
+          ],
+          "strides": [
+            1,
+            1
+          ],
+          "padding": "same",
+          "data_format": "channels_last",
+          "dilation_rate": [
+            1,
+            1
+          ],
+          "activation": "relu",
+          "use_bias": true,
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "bias_constraint": null,
+          "name": "noisenet_dilated_c1",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "noisenet_conv1",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "noisenet_dilated_c2",
+        "class_name": "Conv2D",
+        "config": {
+          "filters": 8,
+          "kernel_initializer": {
+            "class_name": "VarianceScaling",
+            "config": {
+              "scale": 2,
+              "mode": "fan_in",
+              "distribution": "normal",
+              "seed": null
+            }
+          },
+          "kernel_regularizer": null,
+          "kernel_constraint": null,
+          "kernel_size": [
+            3,
+            3
+          ],
+          "strides": [
+            1,
+            1
+          ],
+          "padding": "same",
+          "data_format": "channels_last",
+          "dilation_rate": [
+            1,
+            1
+          ],
+          "activation": "relu",
+          "use_bias": true,
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "bias_constraint": null,
+          "name": "noisenet_dilated_c2",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "noisenet_dilated_c1",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "noisenet_res_add",
+        "class_name": "Add",
+        "config": {
+          "name": "noisenet_res_add",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "noisenet_conv1",
+              0,
+              0,
+              {}
+            ],
+            [
+              "noisenet_dilated_c2",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "noisenet_attn",
+        "class_name": "Conv2D",
+        "config": {
+          "filters": 8,
+          "kernel_initializer": {
+            "class_name": "VarianceScaling",
+            "config": {
+              "scale": 1,
+              "mode": "fan_avg",
+              "distribution": "uniform",
+              "seed": null
+            }
+          },
+          "kernel_regularizer": null,
+          "kernel_constraint": null,
+          "kernel_size": [
+            1,
+            1
+          ],
+          "strides": [
+            1,
+            1
+          ],
+          "padding": "same",
+          "data_format": "channels_last",
+          "dilation_rate": [
+            1,
+            1
+          ],
+          "activation": "sigmoid",
+          "use_bias": true,
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "bias_constraint": null,
+          "name": "noisenet_attn",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "noisenet_res_add",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "noisenet_attn_fusion",
+        "class_name": "Multiply",
+        "config": {
+          "name": "noisenet_attn_fusion",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "noisenet_res_add",
+              0,
+              0,
+              {}
+            ],
+            [
+              "noisenet_attn",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "noisenet_mask_output",
+        "class_name": "Conv2D",
+        "config": {
+          "filters": 1,
+          "kernel_initializer": {
+            "class_name": "VarianceScaling",
+            "config": {
+              "scale": 1,
+              "mode": "fan_avg",
+              "distribution": "uniform",
+              "seed": null
+            }
+          },
+          "kernel_regularizer": null,
+          "kernel_constraint": null,
+          "kernel_size": [
+            3,
+            3
+          ],
+          "strides": [
+            1,
+            1
+          ],
+          "padding": "same",
+          "data_format": "channels_last",
+          "dilation_rate": [
+            1,
+            1
+          ],
+          "activation": "sigmoid",
+          "use_bias": true,
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "bias_constraint": null,
+          "name": "noisenet_mask_output",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "noisenet_attn_fusion",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "noisenet_filtered_output",
+        "class_name": "Multiply",
+        "config": {
+          "name": "noisenet_filtered_output",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "noisenet_input_magnitude_spectrogram",
+              0,
+              0,
+              {}
+            ],
+            [
+              "noisenet_mask_output",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      }
+    ],
+    "input_layers": [
+      [
+        "noisenet_input_magnitude_spectrogram",
+        0,
+        0
+      ]
+    ],
+    "output_layers": [
+      [
+        "noisenet_filtered_output",
+        0,
+        0
+      ]
+    ]
+  },
+  "keras_version": "tfjs-layers 4.22.0",
+  "backend": "tensor_flow.js"
+}

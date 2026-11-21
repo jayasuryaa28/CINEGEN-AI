@@ -1,0 +1,18 @@
+[
+  {
+    "epoch": 1,
+    "trainTotalLoss": 0.0454941364005208,
+    "trainCharLoss": 0.04074363565693299,
+    "trainEdgeLoss": 0.04750501193727056,
+    "valTotalLoss": 0.02432948164641857,
+    "durationSec": 150.2
+  },
+  {
+    "epoch": 2,
+    "trainTotalLoss": 0.040537537851681314,
+    "trainCharLoss": 0.03585844223077098,
+    "trainEdgeLoss": 0.046790956829984985,
+    "valTotalLoss": 0.01692327857017517,
+    "durationSec": 144.9
+  }
+]

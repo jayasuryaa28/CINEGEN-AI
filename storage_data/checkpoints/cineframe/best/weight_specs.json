@@ -1,0 +1,155 @@
+[
+  {
+    "name": "stageA_temporal_conv/kernel",
+    "shape": [
+      3,
+      3,
+      9,
+      16
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "stageA_temporal_conv/bias",
+    "shape": [
+      16
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "stageA_temporal_attn/kernel",
+    "shape": [
+      1,
+      1,
+      16,
+      16
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "stageA_temporal_attn/bias",
+    "shape": [
+      16
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "rdb_0_c1/kernel",
+    "shape": [
+      3,
+      3,
+      16,
+      16
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "rdb_0_c1/bias",
+    "shape": [
+      16
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "rdb_0_c2/kernel",
+    "shape": [
+      3,
+      3,
+      16,
+      16
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "rdb_0_c2/bias",
+    "shape": [
+      16
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "rdb_1_c1/kernel",
+    "shape": [
+      3,
+      3,
+      16,
+      16
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "rdb_1_c1/bias",
+    "shape": [
+      16
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "rdb_1_c2/kernel",
+    "shape": [
+      3,
+      3,
+      16,
+      16
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "rdb_1_c2/bias",
+    "shape": [
+      16
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "base_center_frame_proj/kernel",
+    "shape": [
+      1,
+      1,
+      9,
+      3
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "base_center_frame_proj/bias",
+    "shape": [
+      3
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "stageC_refine_conv/kernel",
+    "shape": [
+      3,
+      3,
+      16,
+      12
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "stageC_refine_conv/bias",
+    "shape": [
+      12
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "residual_detail_map/kernel",
+    "shape": [
+      3,
+      3,
+      12,
+      3
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "residual_detail_map/bias",
+    "shape": [
+      3
+    ],
+    "dtype": "float32"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "evaluatedFrames": 36,
+  "cornerMaeNormalized": 0.016386682185086918,
+  "cornerPixel1080p": 17.697616759893872,
+  "meanScreenIoU": 0.9745934475946139,
+  "homographyReprojectionError": 0.1361886082339498,
+  "motionError": 0.15431177919089484,
+  "occlusionAccuracy": 66.66666666666666,
+  "occlusionAreaMae": 0.09503190957309887,
+  "occlusionMaskPrecision": 52.307692307692314,
+  "occlusionMaskRecall": 40.476190476190474,
+  "occlusionMaskIoU": 29.565217391304348,
+  "qualityMae": 0.09310286423191425,
+  "averageLatencyMs": 14.444444444444445
+}

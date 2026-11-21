@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #08090c;
+  --foreground: #f0f2f7;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom cinematic glow & glass effects */
+.cine-glass {
+  background: rgba(22, 25, 34, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cine-glow {
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.15);
+}
+
+.cine-glow-hover:hover {
+  box-shadow: 0 0 35px rgba(0, 229, 255, 0.3);
+}
+
+.electric-gradient {
+  background: linear-gradient(135deg, #00e5ff 0%, #0072ff 100%);
+}
+
+.electric-text {
+  background: linear-gradient(135deg, #00e5ff 0%, #0072ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

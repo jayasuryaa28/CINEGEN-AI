@@ -1,0 +1,77 @@
+# ==============================================================================
+# CINEGEN AI — Git Ignore Configuration (Open-Source Alpha Release)
+# ==============================================================================
+
+# Node dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Next.js build outputs
+.next/
+out/
+build/
+dist/
+
+# TypeScript cache & environment declarations
+*.tsbuildinfo
+next-env.d.ts
+
+# Environment variables & secrets (CRITICAL)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
+
+# User credentials & sensitive storage (CRITICAL)
+storage_data/credentials/
+storage_data/cloud_instances.json
+storage_data/compute_settings.json
+storage_data/jobs_store.json
+storage_data/*.json
+
+# Large datasets & training media (CRITICAL: Prevents Git LFS / repo bloat)
+storage_data/dataset/
+storage_data/realworld_dataset/
+storage_data/realworld_eval/
+
+# Ephemeral user uploads, processing jobs & outputs
+storage_data/uploads/
+storage_data/processed/
+storage_data/jobs/
+
+# Test artifacts, benchmarks & temporary test runs
+storage_data/test_*/
+storage_data/cinesync_benchmarks/
+storage_data/visual_verifications/
+storage_data/e2e_verification/
+storage_data/phase12_release_eval/
+storage_data/audit_phase13_2_1_1/
+storage_data/hardening_tests/
+storage_data/checkpoints/smoke_test/
+
+# Root test media & test videos
+test_input.mp4
+clean_source_*.mp4
+*.mp4
+*.mkv
+*.mov
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS metadata & editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*.swp
+*.swo

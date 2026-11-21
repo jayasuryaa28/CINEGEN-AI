@@ -1,0 +1,252 @@
+[
+  {
+    "name": "encoder_conv1/kernel",
+    "shape": [
+      3,
+      3,
+      3,
+      16
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "encoder_conv1/bias",
+    "shape": [
+      16
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "encoder_conv2/kernel",
+    "shape": [
+      3,
+      3,
+      16,
+      24
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "encoder_conv2/bias",
+    "shape": [
+      24
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "encoder_conv3/kernel",
+    "shape": [
+      3,
+      3,
+      24,
+      32
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "encoder_conv3/bias",
+    "shape": [
+      32
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "spatial_attention/kernel",
+    "shape": [
+      1,
+      1,
+      32,
+      1
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "spatial_attention/bias",
+    "shape": [
+      1
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "dense_shared/kernel",
+    "shape": [
+      32,
+      48
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "dense_shared/bias",
+    "shape": [
+      48
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "head_corners_dense/kernel",
+    "shape": [
+      48,
+      32
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "head_corners_dense/bias",
+    "shape": [
+      32
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "head_homo_dense/kernel",
+    "shape": [
+      48,
+      32
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "head_homo_dense/bias",
+    "shape": [
+      32
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "head_motion_dense/kernel",
+    "shape": [
+      48,
+      16
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "head_motion_dense/bias",
+    "shape": [
+      16
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "head_occ_dense/kernel",
+    "shape": [
+      48,
+      16
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "head_occ_dense/bias",
+    "shape": [
+      16
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "head_qual_dense/kernel",
+    "shape": [
+      48,
+      32
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "head_qual_dense/bias",
+    "shape": [
+      32
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "mask_conv/kernel",
+    "shape": [
+      3,
+      3,
+      32,
+      1
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "mask_conv/bias",
+    "shape": [
+      1
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "output_corners/kernel",
+    "shape": [
+      32,
+      8
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "output_corners/bias",
+    "shape": [
+      8
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "output_homography/kernel",
+    "shape": [
+      32,
+      8
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "output_homography/bias",
+    "shape": [
+      8
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "output_motion/kernel",
+    "shape": [
+      16,
+      2
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "output_motion/bias",
+    "shape": [
+      2
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "output_occlusion/kernel",
+    "shape": [
+      16,
+      2
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "output_occlusion/bias",
+    "shape": [
+      2
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "output_quality/kernel",
+    "shape": [
+      32,
+      4
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "output_quality/bias",
+    "shape": [
+      4
+    ],
+    "dtype": "float32"
+  }
+]

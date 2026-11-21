@@ -1,0 +1,46 @@
+[
+  {
+    "epoch": 1,
+    "trainTotalLoss": 3.739064428541395,
+    "trainCornerLoss": 0.022289798077609804,
+    "trainHomoLoss": 0.1727809417578909,
+    "trainMaskLoss": 1.678478717803955,
+    "valTotalLoss": 3.318827231725057,
+    "valCornerLoss": 0.02056727682550748,
+    "valMaskLoss": 1.5664841334025066,
+    "durationSec": 87.2
+  },
+  {
+    "epoch": 2,
+    "trainTotalLoss": 3.2759806050194635,
+    "trainCornerLoss": 0.01791458659701877,
+    "trainHomoLoss": 0.08339792903926638,
+    "trainMaskLoss": 1.5376303593317668,
+    "valTotalLoss": 3.0876240730285645,
+    "valCornerLoss": 0.012413475041588148,
+    "valMaskLoss": 1.4763471682866414,
+    "durationSec": 80.2
+  },
+  {
+    "epoch": 3,
+    "trainTotalLoss": 3.0982200834486218,
+    "trainCornerLoss": 0.008022449082798429,
+    "trainHomoLoss": 0.04373398133450084,
+    "trainMaskLoss": 1.4897770749198065,
+    "valTotalLoss": 2.9990643660227456,
+    "valCornerLoss": 0.0038256945554167032,
+    "valMaskLoss": 1.4443997542063396,
+    "durationSec": 74.3
+  },
+  {
+    "epoch": 4,
+    "trainTotalLoss": 2.906799554824829,
+    "trainCornerLoss": 0.001999146295323347,
+    "trainHomoLoss": 0.03009556828894549,
+    "trainMaskLoss": 1.386163764529758,
+    "valTotalLoss": 2.9642419815063477,
+    "valCornerLoss": 0.00027896559913642704,
+    "valMaskLoss": 1.4091699918111165,
+    "durationSec": 76
+  }
+]

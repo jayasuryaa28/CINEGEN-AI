@@ -1,0 +1,476 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-11-21T05:47:27.114Z",
+  "checkpoints": [
+    {
+      "file": "audio/echonet/best/model_topology.json",
+      "bytes": 6807,
+      "sha256": "ac00bcffeb7c126d14bded6b2f3bfd16db5a6464c2255467224c2568da2904ba"
+    },
+    {
+      "file": "audio/echonet/best/weights.bin",
+      "bytes": 5284,
+      "sha256": "5974a8bffd02bf1be73175be00caf62952873363662835deb4a6920a56618f19"
+    },
+    {
+      "file": "audio/echonet/best/weight_specs.json",
+      "bytes": 894,
+      "sha256": "f74a3fba526fe8048a5ec24be7ecfc20bb44e68920f188b8f056dbdb54e384d4"
+    },
+    {
+      "file": "audio/echonet/final/model_topology.json",
+      "bytes": 6807,
+      "sha256": "ac00bcffeb7c126d14bded6b2f3bfd16db5a6464c2255467224c2568da2904ba"
+    },
+    {
+      "file": "audio/echonet/final/weights.bin",
+      "bytes": 5284,
+      "sha256": "5974a8bffd02bf1be73175be00caf62952873363662835deb4a6920a56618f19"
+    },
+    {
+      "file": "audio/echonet/final/weight_specs.json",
+      "bytes": 894,
+      "sha256": "f74a3fba526fe8048a5ec24be7ecfc20bb44e68920f188b8f056dbdb54e384d4"
+    },
+    {
+      "file": "audio/evaluation_metrics.json",
+      "bytes": 676,
+      "sha256": "1a574315e72db136679907c9169715ae575dd6e25c239bd448d9cccd1900367b"
+    },
+    {
+      "file": "audio/noisenet/best/model_topology.json",
+      "bytes": 8594,
+      "sha256": "6477150c87fee4ca3887e67267e606223fbea27618825c1a55bb5ac6b0978016"
+    },
+    {
+      "file": "audio/noisenet/best/weights.bin",
+      "bytes": 5572,
+      "sha256": "b909780741afc4a3cb5c511266fee40829bce89b05dfebbbbaedf161ab4c21bf"
+    },
+    {
+      "file": "audio/noisenet/best/weight_specs.json",
+      "bytes": 1147,
+      "sha256": "9a737d1acc68d6005bf7df35896e125eb6e6cd5c03299fd1a44c5e81e7e82f20"
+    },
+    {
+      "file": "audio/noisenet/final/model_topology.json",
+      "bytes": 8594,
+      "sha256": "6477150c87fee4ca3887e67267e606223fbea27618825c1a55bb5ac6b0978016"
+    },
+    {
+      "file": "audio/noisenet/final/weights.bin",
+      "bytes": 5572,
+      "sha256": "b909780741afc4a3cb5c511266fee40829bce89b05dfebbbbaedf161ab4c21bf"
+    },
+    {
+      "file": "audio/noisenet/final/weight_specs.json",
+      "bytes": 1147,
+      "sha256": "9a737d1acc68d6005bf7df35896e125eb6e6cd5c03299fd1a44c5e81e7e82f20"
+    },
+    {
+      "file": "audio/stemnet/best/model_topology.json",
+      "bytes": 13029,
+      "sha256": "21f3de197da15554b1c4c05b42e972618d3357145afdf0bd679fb662a570a031"
+    },
+    {
+      "file": "audio/stemnet/best/weights.bin",
+      "bytes": 6604,
+      "sha256": "9adc0875e3f0013c0ec5bdb16a907f3924c3957264a457b270d2ab9432b1c4c1"
+    },
+    {
+      "file": "audio/stemnet/best/weight_specs.json",
+      "bytes": 1842,
+      "sha256": "a84baf0fb9abb1e068f6e92a4c840c1e56b718c02048545ef4163456670b0b1c"
+    },
+    {
+      "file": "audio/stemnet/final/model_topology.json",
+      "bytes": 13029,
+      "sha256": "21f3de197da15554b1c4c05b42e972618d3357145afdf0bd679fb662a570a031"
+    },
+    {
+      "file": "audio/stemnet/final/weights.bin",
+      "bytes": 6604,
+      "sha256": "7a289ba7cb0b927c5698a60413175ca40a4beae4bace08cd0267f133b7088bda"
+    },
+    {
+      "file": "audio/stemnet/final/weight_specs.json",
+      "bytes": 1842,
+      "sha256": "a84baf0fb9abb1e068f6e92a4c840c1e56b718c02048545ef4163456670b0b1c"
+    },
+    {
+      "file": "audio/voicenet/best/model_topology.json",
+      "bytes": 6322,
+      "sha256": "078686608013f07576aed0a024cebc1a12b594e8688d76c7292b05f9cc0e463a"
+    },
+    {
+      "file": "audio/voicenet/best/weights.bin",
+      "bytes": 2948,
+      "sha256": "4b13872b4d08d13d74eec8f5c8c84082fb60e73b58b8c6d3dfaaca4c822a89e0"
+    },
+    {
+      "file": "audio/voicenet/best/weight_specs.json",
+      "bytes": 691,
+      "sha256": "bbe3c3a19678d7bd22256d60e179d10c5559197805b1fe3ca3301be7ed74da6a"
+    },
+    {
+      "file": "audio/voicenet/final/model_topology.json",
+      "bytes": 6322,
+      "sha256": "078686608013f07576aed0a024cebc1a12b594e8688d76c7292b05f9cc0e463a"
+    },
+    {
+      "file": "audio/voicenet/final/weights.bin",
+      "bytes": 2948,
+      "sha256": "4b13872b4d08d13d74eec8f5c8c84082fb60e73b58b8c6d3dfaaca4c822a89e0"
+    },
+    {
+      "file": "audio/voicenet/final/weight_specs.json",
+      "bytes": 691,
+      "sha256": "bbe3c3a19678d7bd22256d60e179d10c5559197805b1fe3ca3301be7ed74da6a"
+    },
+    {
+      "file": "audio_hardened/echonet/best/model_topology.json",
+      "bytes": 6683,
+      "sha256": "ecb9a289075be056ae84137ae1a426f4818d81c62d9d12690c77148f601eeb7f"
+    },
+    {
+      "file": "audio_hardened/echonet/best/weights.bin",
+      "bytes": 5284,
+      "sha256": "514954d6026966a98afdb705c33369b8b8db5cb0fce67e912fe15fd8c4bddbfb"
+    },
+    {
+      "file": "audio_hardened/echonet/best/weight_specs.json",
+      "bytes": 890,
+      "sha256": "40c0084c83042d285f1a5803e1ccb32f7e8ff86127573ce34eca05113214b8fa"
+    },
+    {
+      "file": "audio_hardened/echonet/final/model_topology.json",
+      "bytes": 6683,
+      "sha256": "ecb9a289075be056ae84137ae1a426f4818d81c62d9d12690c77148f601eeb7f"
+    },
+    {
+      "file": "audio_hardened/echonet/final/weights.bin",
+      "bytes": 5284,
+      "sha256": "514954d6026966a98afdb705c33369b8b8db5cb0fce67e912fe15fd8c4bddbfb"
+    },
+    {
+      "file": "audio_hardened/echonet/final/weight_specs.json",
+      "bytes": 890,
+      "sha256": "40c0084c83042d285f1a5803e1ccb32f7e8ff86127573ce34eca05113214b8fa"
+    },
+    {
+      "file": "audio_hardened/evaluation_metrics_hardened.json",
+      "bytes": 1471,
+      "sha256": "4d6345273fea63aa0bbf04577aad31e8b33f4daa3c13e42c0322d7c9127e1309"
+    },
+    {
+      "file": "audio_hardened/noisenet/best/model_topology.json",
+      "bytes": 8426,
+      "sha256": "4d2ed4d179dd477179e11d89e0653079c690346138d4b1df93ddfdfd0c640b28"
+    },
+    {
+      "file": "audio_hardened/noisenet/best/weights.bin",
+      "bytes": 5572,
+      "sha256": "5a73d216dd163ab698646c969540e63f4cdc6e6c899536e68927e46ad0d070e2"
+    },
+    {
+      "file": "audio_hardened/noisenet/best/weight_specs.json",
+      "bytes": 1115,
+      "sha256": "5e0f260807293e6952dd99f0ee1f9daa5620d5d2eb3e5b31a8e8dd30c66dbbdb"
+    },
+    {
+      "file": "audio_hardened/noisenet/final/model_topology.json",
+      "bytes": 8426,
+      "sha256": "4d2ed4d179dd477179e11d89e0653079c690346138d4b1df93ddfdfd0c640b28"
+    },
+    {
+      "file": "audio_hardened/noisenet/final/weights.bin",
+      "bytes": 5572,
+      "sha256": "5a73d216dd163ab698646c969540e63f4cdc6e6c899536e68927e46ad0d070e2"
+    },
+    {
+      "file": "audio_hardened/noisenet/final/weight_specs.json",
+      "bytes": 1115,
+      "sha256": "5e0f260807293e6952dd99f0ee1f9daa5620d5d2eb3e5b31a8e8dd30c66dbbdb"
+    },
+    {
+      "file": "audio_hardened/stemnet/best/model_topology.json",
+      "bytes": 6000,
+      "sha256": "cd11a35ad2733409d8a1a0be7f1c2f7a283351eee463d26ed6eecb6041c814ca"
+    },
+    {
+      "file": "audio_hardened/stemnet/best/weights.bin",
+      "bytes": 3532,
+      "sha256": "e3794380f7b4ad85c680965e3bc43e70a2031e1266d4340e63348464ef3a987d"
+    },
+    {
+      "file": "audio_hardened/stemnet/best/weight_specs.json",
+      "bytes": 685,
+      "sha256": "e541db4b386ae1522799585d66c24395f49949d2ea3b9be5c657c99a692d4986"
+    },
+    {
+      "file": "audio_hardened/stemnet/final/model_topology.json",
+      "bytes": 6000,
+      "sha256": "cd11a35ad2733409d8a1a0be7f1c2f7a283351eee463d26ed6eecb6041c814ca"
+    },
+    {
+      "file": "audio_hardened/stemnet/final/weights.bin",
+      "bytes": 3532,
+      "sha256": "e3794380f7b4ad85c680965e3bc43e70a2031e1266d4340e63348464ef3a987d"
+    },
+    {
+      "file": "audio_hardened/stemnet/final/weight_specs.json",
+      "bytes": 685,
+      "sha256": "e541db4b386ae1522799585d66c24395f49949d2ea3b9be5c657c99a692d4986"
+    },
+    {
+      "file": "audio_hardened/voicenet/best/model_topology.json",
+      "bytes": 6067,
+      "sha256": "fbd3aac39763274e5d853e780df429ead7101245c7399ec9b23d936a209fc108"
+    },
+    {
+      "file": "audio_hardened/voicenet/best/weights.bin",
+      "bytes": 2948,
+      "sha256": "c81544f18c61eb7f1f195cf13cae1eed46a62232cec5bc97c2d51d0615c51301"
+    },
+    {
+      "file": "audio_hardened/voicenet/best/weight_specs.json",
+      "bytes": 671,
+      "sha256": "81603fc0739af663cef678c89fe3057110afe1c152100555b611f3b025559ee6"
+    },
+    {
+      "file": "audio_hardened/voicenet/final/model_topology.json",
+      "bytes": 6067,
+      "sha256": "fbd3aac39763274e5d853e780df429ead7101245c7399ec9b23d936a209fc108"
+    },
+    {
+      "file": "audio_hardened/voicenet/final/weights.bin",
+      "bytes": 2948,
+      "sha256": "c81544f18c61eb7f1f195cf13cae1eed46a62232cec5bc97c2d51d0615c51301"
+    },
+    {
+      "file": "audio_hardened/voicenet/final/weight_specs.json",
+      "bytes": 671,
+      "sha256": "81603fc0739af663cef678c89fe3057110afe1c152100555b611f3b025559ee6"
+    },
+    {
+      "file": "audio_phase5_baseline/echonet/best/model_topology.json",
+      "bytes": 6807,
+      "sha256": "ac00bcffeb7c126d14bded6b2f3bfd16db5a6464c2255467224c2568da2904ba"
+    },
+    {
+      "file": "audio_phase5_baseline/echonet/best/weights.bin",
+      "bytes": 5284,
+      "sha256": "5974a8bffd02bf1be73175be00caf62952873363662835deb4a6920a56618f19"
+    },
+    {
+      "file": "audio_phase5_baseline/echonet/best/weight_specs.json",
+      "bytes": 894,
+      "sha256": "f74a3fba526fe8048a5ec24be7ecfc20bb44e68920f188b8f056dbdb54e384d4"
+    },
+    {
+      "file": "audio_phase5_baseline/echonet/final/model_topology.json",
+      "bytes": 6807,
+      "sha256": "ac00bcffeb7c126d14bded6b2f3bfd16db5a6464c2255467224c2568da2904ba"
+    },
+    {
+      "file": "audio_phase5_baseline/echonet/final/weights.bin",
+      "bytes": 5284,
+      "sha256": "5974a8bffd02bf1be73175be00caf62952873363662835deb4a6920a56618f19"
+    },
+    {
+      "file": "audio_phase5_baseline/echonet/final/weight_specs.json",
+      "bytes": 894,
+      "sha256": "f74a3fba526fe8048a5ec24be7ecfc20bb44e68920f188b8f056dbdb54e384d4"
+    },
+    {
+      "file": "audio_phase5_baseline/evaluation_metrics.json",
+      "bytes": 676,
+      "sha256": "1a574315e72db136679907c9169715ae575dd6e25c239bd448d9cccd1900367b"
+    },
+    {
+      "file": "audio_phase5_baseline/noisenet/best/model_topology.json",
+      "bytes": 8594,
+      "sha256": "6477150c87fee4ca3887e67267e606223fbea27618825c1a55bb5ac6b0978016"
+    },
+    {
+      "file": "audio_phase5_baseline/noisenet/best/weights.bin",
+      "bytes": 5572,
+      "sha256": "b909780741afc4a3cb5c511266fee40829bce89b05dfebbbbaedf161ab4c21bf"
+    },
+    {
+      "file": "audio_phase5_baseline/noisenet/best/weight_specs.json",
+      "bytes": 1147,
+      "sha256": "9a737d1acc68d6005bf7df35896e125eb6e6cd5c03299fd1a44c5e81e7e82f20"
+    },
+    {
+      "file": "audio_phase5_baseline/noisenet/final/model_topology.json",
+      "bytes": 8594,
+      "sha256": "6477150c87fee4ca3887e67267e606223fbea27618825c1a55bb5ac6b0978016"
+    },
+    {
+      "file": "audio_phase5_baseline/noisenet/final/weights.bin",
+      "bytes": 5572,
+      "sha256": "b909780741afc4a3cb5c511266fee40829bce89b05dfebbbbaedf161ab4c21bf"
+    },
+    {
+      "file": "audio_phase5_baseline/noisenet/final/weight_specs.json",
+      "bytes": 1147,
+      "sha256": "9a737d1acc68d6005bf7df35896e125eb6e6cd5c03299fd1a44c5e81e7e82f20"
+    },
+    {
+      "file": "audio_phase5_baseline/stemnet/best/model_topology.json",
+      "bytes": 13029,
+      "sha256": "21f3de197da15554b1c4c05b42e972618d3357145afdf0bd679fb662a570a031"
+    },
+    {
+      "file": "audio_phase5_baseline/stemnet/best/weights.bin",
+      "bytes": 6604,
+      "sha256": "9adc0875e3f0013c0ec5bdb16a907f3924c3957264a457b270d2ab9432b1c4c1"
+    },
+    {
+      "file": "audio_phase5_baseline/stemnet/best/weight_specs.json",
+      "bytes": 1842,
+      "sha256": "a84baf0fb9abb1e068f6e92a4c840c1e56b718c02048545ef4163456670b0b1c"
+    },
+    {
+      "file": "audio_phase5_baseline/stemnet/final/model_topology.json",
+      "bytes": 13029,
+      "sha256": "21f3de197da15554b1c4c05b42e972618d3357145afdf0bd679fb662a570a031"
+    },
+    {
+      "file": "audio_phase5_baseline/stemnet/final/weights.bin",
+      "bytes": 6604,
+      "sha256": "7a289ba7cb0b927c5698a60413175ca40a4beae4bace08cd0267f133b7088bda"
+    },
+    {
+      "file": "audio_phase5_baseline/stemnet/final/weight_specs.json",
+      "bytes": 1842,
+      "sha256": "a84baf0fb9abb1e068f6e92a4c840c1e56b718c02048545ef4163456670b0b1c"
+    },
+    {
+      "file": "audio_phase5_baseline/voicenet/best/model_topology.json",
+      "bytes": 6322,
+      "sha256": "078686608013f07576aed0a024cebc1a12b594e8688d76c7292b05f9cc0e463a"
+    },
+    {
+      "file": "audio_phase5_baseline/voicenet/best/weights.bin",
+      "bytes": 2948,
+      "sha256": "4b13872b4d08d13d74eec8f5c8c84082fb60e73b58b8c6d3dfaaca4c822a89e0"
+    },
+    {
+      "file": "audio_phase5_baseline/voicenet/best/weight_specs.json",
+      "bytes": 691,
+      "sha256": "bbe3c3a19678d7bd22256d60e179d10c5559197805b1fe3ca3301be7ed74da6a"
+    },
+    {
+      "file": "audio_phase5_baseline/voicenet/final/model_topology.json",
+      "bytes": 6322,
+      "sha256": "078686608013f07576aed0a024cebc1a12b594e8688d76c7292b05f9cc0e463a"
+    },
+    {
+      "file": "audio_phase5_baseline/voicenet/final/weights.bin",
+      "bytes": 2948,
+      "sha256": "4b13872b4d08d13d74eec8f5c8c84082fb60e73b58b8c6d3dfaaca4c822a89e0"
+    },
+    {
+      "file": "audio_phase5_baseline/voicenet/final/weight_specs.json",
+      "bytes": 691,
+      "sha256": "bbe3c3a19678d7bd22256d60e179d10c5559197805b1fe3ca3301be7ed74da6a"
+    },
+    {
+      "file": "cineframe/best/model_topology.json",
+      "bytes": 15190,
+      "sha256": "e1f0ccac2c2b480dc73595262d4b47045e99b5e3829e07868de0b158e9017908"
+    },
+    {
+      "file": "cineframe/best/weights.bin",
+      "bytes": 51844,
+      "sha256": "b303c699e5cc0496c81b5281eb3efe9cff384a265c24b90c08089b70962759ae"
+    },
+    {
+      "file": "cineframe/best/weight_specs.json",
+      "bytes": 2040,
+      "sha256": "d4a9baff35e3c5de6236ba72891393a706059390d6e64517c4c2debb1054120e"
+    },
+    {
+      "file": "cineframe/evaluation_metrics.json",
+      "bytes": 626,
+      "sha256": "fe097d391df16621f21f196f78f059485435ac289e51474c0ec1c7ac7935e51f"
+    },
+    {
+      "file": "cineframe/final/model_topology.json",
+      "bytes": 15190,
+      "sha256": "e1f0ccac2c2b480dc73595262d4b47045e99b5e3829e07868de0b158e9017908"
+    },
+    {
+      "file": "cineframe/final/weights.bin",
+      "bytes": 51844,
+      "sha256": "b303c699e5cc0496c81b5281eb3efe9cff384a265c24b90c08089b70962759ae"
+    },
+    {
+      "file": "cineframe/final/weight_specs.json",
+      "bytes": 2040,
+      "sha256": "d4a9baff35e3c5de6236ba72891393a706059390d6e64517c4c2debb1054120e"
+    },
+    {
+      "file": "cineframe/smoke_test/model_topology.json",
+      "bytes": 13212,
+      "sha256": "ad050bc42ca9b7436163e36cb8e4bf42833cdb9dd3c41d9acebac0457ce0a560"
+    },
+    {
+      "file": "cineframe/smoke_test/weights.bin",
+      "bytes": 51724,
+      "sha256": "997249ba585f64d2e52c5dbe2becf113d441bd7f86b569fba7fb4a6a259bddd8"
+    },
+    {
+      "file": "cineframe/smoke_test/weight_specs.json",
+      "bytes": 1805,
+      "sha256": "401fb045ccd996e5f1732a1e3f790a3f00b3893ff36a1ca2cbda3b0ac606a7ca"
+    },
+    {
+      "file": "cineframe/training_history.json",
+      "bytes": 439,
+      "sha256": "f20057bcd6ebf1f6ff363e7d9e1b151d5e7c89f4d80c655ad5a900f67b33c277"
+    },
+    {
+      "file": "cinevision/best/model_topology.json",
+      "bytes": 19410,
+      "sha256": "f808a750d1186265aa5d5c8ab7cee3c764bd8446a9dc66b0fd357f7ce9ff2873"
+    },
+    {
+      "file": "cinevision/best/weights.bin",
+      "bytes": 79112,
+      "sha256": "b6a1be63ab00eba51b887b13dfaf536ac6d71479c9c5b7ca1aa648a687a191fa"
+    },
+    {
+      "file": "cinevision/best/weight_specs.json",
+      "bytes": 3417,
+      "sha256": "3310a995a96dbbe01cddb5cd553d5802011e7a924738318419a5867169824411"
+    },
+    {
+      "file": "cinevision/evaluation_metrics.json",
+      "bytes": 545,
+      "sha256": "47ab395366b7e26f748eeae6e3c327db65f5646febbfa251f30d13de5b68d005"
+    },
+    {
+      "file": "cinevision/final/model_topology.json",
+      "bytes": 19410,
+      "sha256": "f808a750d1186265aa5d5c8ab7cee3c764bd8446a9dc66b0fd357f7ce9ff2873"
+    },
+    {
+      "file": "cinevision/final/weights.bin",
+      "bytes": 79112,
+      "sha256": "b6a1be63ab00eba51b887b13dfaf536ac6d71479c9c5b7ca1aa648a687a191fa"
+    },
+    {
+      "file": "cinevision/final/weight_specs.json",
+      "bytes": 3417,
+      "sha256": "3310a995a96dbbe01cddb5cd553d5802011e7a924738318419a5867169824411"
+    },
+    {
+      "file": "cinevision/training_history.json",
+      "bytes": 1359,
+      "sha256": "6f4e363c937e5bd3da7f65a16b1ab36724da0eb962fa695ee0df391b5c9dfe6c"
+    }
+  ]
+}

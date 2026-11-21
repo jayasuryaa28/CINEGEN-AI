@@ -1,0 +1,38 @@
+name: CINEGEN AI CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js Runtime
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache: 'npm'
+
+      - name: Install System Media Utilities
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Install Node Dependencies
+        run: npm ci
+
+      - name: Static Type Checking
+        run: npx tsc --noEmit
+
+      - name: Run Core Regression Suite
+        run: |
+          node scripts/test_phase11_regression.js
+          node scripts/test_phase13_1_4_fixes.js
+          node scripts/test_phase13_2_perspective.js
+          node scripts/test_phase13_3_2_validation.js

@@ -1,0 +1,17 @@
+{
+  "evaluatedSequences": 16,
+  "degradedPsnr": 23.47569404941174,
+  "baselineFfmpegPsnr": 16.97032560075168,
+  "cineframePsnr": 24.33288880521041,
+  "psnrGainOverDegraded": 0.8571947557986697,
+  "psnrGainOverBaseline": 7.362563204458731,
+  "degradedSsim": 0.9878763460011758,
+  "baselineFfmpegSsim": 0.9483500358783784,
+  "cineframeSsim": 0.9911027020373707,
+  "ssimGainOverDegraded": 0.0032263560361949217,
+  "ssimGainOverBaseline": 0.042752666158992314,
+  "temporalConsistencyError": 0.032798677512749924,
+  "edgePreservationError": 0.03433867709090435,
+  "averageLatencyMs": 350.8125,
+  "peakMemoryMb": 62.22738552093506
+}

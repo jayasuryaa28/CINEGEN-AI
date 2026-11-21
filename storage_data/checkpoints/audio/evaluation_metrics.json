@@ -1,0 +1,28 @@
+{
+  "testSequences": 8,
+  "noisenet": {
+    "inputSdr": 10.722631397070618,
+    "restoredSdr": 7.905559482694496,
+    "sdrGain": -2.817071914376122,
+    "latencyMs": 180.875
+  },
+  "echonet": {
+    "inputSdr": 5.598791148019896,
+    "restoredSdr": 5.581912072194668,
+    "sdrGain": -0.016879075825228185,
+    "latencyMs": 156.5
+  },
+  "stemnet": {
+    "dialogueSdr": 6.102001873419813,
+    "musicSdr": 0.5685226145827011,
+    "effectsSdr": 0.3539757967873683,
+    "overallSdr": 2.341500094929961,
+    "latencyMs": 207.625
+  },
+  "voicenet": {
+    "inputSdr": 8.810485134987449,
+    "restoredSdr": 9.167556019667472,
+    "sdrGain": 0.3570708846800237,
+    "latencyMs": 97
+  }
+}

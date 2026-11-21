@@ -1,0 +1,305 @@
+{
+  "class_name": "Model",
+  "config": {
+    "name": "ECHONET_Hardened",
+    "layers": [
+      {
+        "name": "echonet_input",
+        "class_name": "InputLayer",
+        "config": {
+          "batch_input_shape": [
+            null,
+            null,
+            null,
+            1
+          ],
+          "dtype": "float32",
+          "sparse": false,
+          "name": "echonet_input"
+        },
+        "inbound_nodes": []
+      },
+      {
+        "name": "conv2d_Conv2D1",
+        "class_name": "Conv2D",
+        "config": {
+          "filters": 8,
+          "kernel_initializer": {
+            "class_name": "VarianceScaling",
+            "config": {
+              "scale": 2,
+              "mode": "fan_in",
+              "distribution": "normal",
+              "seed": null
+            }
+          },
+          "kernel_regularizer": null,
+          "kernel_constraint": null,
+          "kernel_size": [
+            3,
+            3
+          ],
+          "strides": [
+            1,
+            1
+          ],
+          "padding": "same",
+          "data_format": "channels_last",
+          "dilation_rate": [
+            1,
+            1
+          ],
+          "activation": "relu",
+          "use_bias": true,
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "bias_constraint": null,
+          "name": "conv2d_Conv2D1",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "echonet_input",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "conv2d_Conv2D2",
+        "class_name": "Conv2D",
+        "config": {
+          "filters": 8,
+          "kernel_initializer": {
+            "class_name": "VarianceScaling",
+            "config": {
+              "scale": 2,
+              "mode": "fan_in",
+              "distribution": "normal",
+              "seed": null
+            }
+          },
+          "kernel_regularizer": null,
+          "kernel_constraint": null,
+          "kernel_size": [
+            3,
+            3
+          ],
+          "strides": [
+            1,
+            1
+          ],
+          "padding": "same",
+          "data_format": "channels_last",
+          "dilation_rate": [
+            1,
+            1
+          ],
+          "activation": "relu",
+          "use_bias": true,
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "bias_constraint": null,
+          "name": "conv2d_Conv2D2",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "conv2d_Conv2D1",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "conv2d_Conv2D3",
+        "class_name": "Conv2D",
+        "config": {
+          "filters": 8,
+          "kernel_initializer": {
+            "class_name": "VarianceScaling",
+            "config": {
+              "scale": 2,
+              "mode": "fan_in",
+              "distribution": "normal",
+              "seed": null
+            }
+          },
+          "kernel_regularizer": null,
+          "kernel_constraint": null,
+          "kernel_size": [
+            3,
+            3
+          ],
+          "strides": [
+            1,
+            1
+          ],
+          "padding": "same",
+          "data_format": "channels_last",
+          "dilation_rate": [
+            1,
+            1
+          ],
+          "activation": "relu",
+          "use_bias": true,
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "bias_constraint": null,
+          "name": "conv2d_Conv2D3",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "conv2d_Conv2D2",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "add_Add1",
+        "class_name": "Add",
+        "config": {
+          "name": "add_Add1",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "conv2d_Conv2D1",
+              0,
+              0,
+              {}
+            ],
+            [
+              "conv2d_Conv2D3",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "echonet_mask",
+        "class_name": "Conv2D",
+        "config": {
+          "filters": 1,
+          "kernel_initializer": {
+            "class_name": "VarianceScaling",
+            "config": {
+              "scale": 1,
+              "mode": "fan_avg",
+              "distribution": "normal",
+              "seed": null
+            }
+          },
+          "kernel_regularizer": null,
+          "kernel_constraint": null,
+          "kernel_size": [
+            3,
+            3
+          ],
+          "strides": [
+            1,
+            1
+          ],
+          "padding": "same",
+          "data_format": "channels_last",
+          "dilation_rate": [
+            1,
+            1
+          ],
+          "activation": "sigmoid",
+          "use_bias": true,
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "bias_constraint": null,
+          "name": "echonet_mask",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "add_Add1",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "echonet_out",
+        "class_name": "Multiply",
+        "config": {
+          "name": "echonet_out",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "echonet_input",
+              0,
+              0,
+              {}
+            ],
+            [
+              "echonet_mask",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      }
+    ],
+    "input_layers": [
+      [
+        "echonet_input",
+        0,
+        0
+      ]
+    ],
+    "output_layers": [
+      [
+        "echonet_out",
+        0,
+        0
+      ],
+      [
+        "echonet_mask",
+        0,
+        0
+      ]
+    ]
+  },
+  "keras_version": "tfjs-layers 4.22.0",
+  "backend": "tensor_flow.js"
+}

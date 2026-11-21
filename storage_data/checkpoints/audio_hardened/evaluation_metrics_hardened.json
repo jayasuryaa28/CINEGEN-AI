@@ -1,0 +1,47 @@
+{
+  "testSequences": 12,
+  "noisenet": {
+    "inputSdr": 10.000261507349148,
+    "outputSdr": 11.656567388371014,
+    "sdrGain": 1.656305881021866,
+    "inputSiSdr": 10.009159912860008,
+    "outputSiSdr": 11.343310496777024,
+    "siSdrGain": 1.3341505839170165,
+    "spectralConvergence": 0.33020047764006205,
+    "logSpectralDistance": 20.322474714027276,
+    "latencyMs": 144.5,
+    "bypassSdr": 10.000261507349148
+  },
+  "echonet": {
+    "inputSdr": 3.746481489215849,
+    "outputSdr": 3.747580309887695,
+    "sdrGain": 0.0010988206718464493,
+    "inputSiSdr": 2.2539717036326206,
+    "outputSiSdr": 2.254151070822989,
+    "siSdrGain": 0.0001793671903686326,
+    "spectralConvergence": 0.39758445234872203,
+    "logSpectralDistance": 7.642298273493554,
+    "latencyMs": 120.25,
+    "bypassSdr": 3.746481489215849
+  },
+  "stemnet": {
+    "dialogueSdr": 5.090577322054359,
+    "musicSdr": 0.00025250687597025125,
+    "effectsSdr": -1.6412533934108524,
+    "recombinationSdr": 50,
+    "latencyMs": 113.16666666666667
+  },
+  "voicenet": {
+    "inputSdr": 12.500201732921058,
+    "outputSdr": 11.641503487994298,
+    "sdrGain": -0.8586982449267614,
+    "inputSiSdr": 12.689409070765853,
+    "outputSiSdr": 12.086314455384965,
+    "siSdrGain": -0.6030946153808875,
+    "spectralConvergence": 0.13450385376713792,
+    "logSpectralDistance": 6.9231402388731995,
+    "latencyMs": 74.08333333333333,
+    "bypassSdr": 12.500201732921058
+  },
+  "peakMemoryMb": 90.15479278564453
+}

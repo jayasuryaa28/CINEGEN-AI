@@ -1,0 +1,570 @@
+{
+  "class_name": "Model",
+  "config": {
+    "name": "STEMNET_Model",
+    "layers": [
+      {
+        "name": "stemnet_input_mixture_spectrogram",
+        "class_name": "InputLayer",
+        "config": {
+          "batch_input_shape": [
+            null,
+            null,
+            null,
+            1
+          ],
+          "dtype": "float32",
+          "sparse": false,
+          "name": "stemnet_input_mixture_spectrogram"
+        },
+        "inbound_nodes": []
+      },
+      {
+        "name": "stemnet_shared_c1",
+        "class_name": "Conv2D",
+        "config": {
+          "filters": 8,
+          "kernel_initializer": {
+            "class_name": "VarianceScaling",
+            "config": {
+              "scale": 2,
+              "mode": "fan_in",
+              "distribution": "normal",
+              "seed": null
+            }
+          },
+          "kernel_regularizer": null,
+          "kernel_constraint": null,
+          "kernel_size": [
+            3,
+            3
+          ],
+          "strides": [
+            1,
+            1
+          ],
+          "padding": "same",
+          "data_format": "channels_last",
+          "dilation_rate": [
+            1,
+            1
+          ],
+          "activation": "relu",
+          "use_bias": true,
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "bias_constraint": null,
+          "name": "stemnet_shared_c1",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "stemnet_input_mixture_spectrogram",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "stemnet_shared_c2",
+        "class_name": "Conv2D",
+        "config": {
+          "filters": 8,
+          "kernel_initializer": {
+            "class_name": "VarianceScaling",
+            "config": {
+              "scale": 2,
+              "mode": "fan_in",
+              "distribution": "normal",
+              "seed": null
+            }
+          },
+          "kernel_regularizer": null,
+          "kernel_constraint": null,
+          "kernel_size": [
+            3,
+            3
+          ],
+          "strides": [
+            1,
+            1
+          ],
+          "padding": "same",
+          "data_format": "channels_last",
+          "dilation_rate": [
+            1,
+            1
+          ],
+          "activation": "relu",
+          "use_bias": true,
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "bias_constraint": null,
+          "name": "stemnet_shared_c2",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "stemnet_shared_c1",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "stemnet_shared_add",
+        "class_name": "Add",
+        "config": {
+          "name": "stemnet_shared_add",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "stemnet_shared_c1",
+              0,
+              0,
+              {}
+            ],
+            [
+              "stemnet_shared_c2",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "stemnet_diag_refine",
+        "class_name": "Conv2D",
+        "config": {
+          "filters": 4,
+          "kernel_initializer": {
+            "class_name": "VarianceScaling",
+            "config": {
+              "scale": 2,
+              "mode": "fan_in",
+              "distribution": "normal",
+              "seed": null
+            }
+          },
+          "kernel_regularizer": null,
+          "kernel_constraint": null,
+          "kernel_size": [
+            3,
+            3
+          ],
+          "strides": [
+            1,
+            1
+          ],
+          "padding": "same",
+          "data_format": "channels_last",
+          "dilation_rate": [
+            1,
+            1
+          ],
+          "activation": "relu",
+          "use_bias": true,
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "bias_constraint": null,
+          "name": "stemnet_diag_refine",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "stemnet_shared_add",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "stemnet_music_refine",
+        "class_name": "Conv2D",
+        "config": {
+          "filters": 4,
+          "kernel_initializer": {
+            "class_name": "VarianceScaling",
+            "config": {
+              "scale": 2,
+              "mode": "fan_in",
+              "distribution": "normal",
+              "seed": null
+            }
+          },
+          "kernel_regularizer": null,
+          "kernel_constraint": null,
+          "kernel_size": [
+            3,
+            3
+          ],
+          "strides": [
+            1,
+            1
+          ],
+          "padding": "same",
+          "data_format": "channels_last",
+          "dilation_rate": [
+            1,
+            1
+          ],
+          "activation": "relu",
+          "use_bias": true,
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "bias_constraint": null,
+          "name": "stemnet_music_refine",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "stemnet_shared_add",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "stemnet_fx_refine",
+        "class_name": "Conv2D",
+        "config": {
+          "filters": 4,
+          "kernel_initializer": {
+            "class_name": "VarianceScaling",
+            "config": {
+              "scale": 2,
+              "mode": "fan_in",
+              "distribution": "normal",
+              "seed": null
+            }
+          },
+          "kernel_regularizer": null,
+          "kernel_constraint": null,
+          "kernel_size": [
+            3,
+            3
+          ],
+          "strides": [
+            1,
+            1
+          ],
+          "padding": "same",
+          "data_format": "channels_last",
+          "dilation_rate": [
+            1,
+            1
+          ],
+          "activation": "relu",
+          "use_bias": true,
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "bias_constraint": null,
+          "name": "stemnet_fx_refine",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "stemnet_shared_add",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "stemnet_diag_mask",
+        "class_name": "Conv2D",
+        "config": {
+          "filters": 1,
+          "kernel_initializer": {
+            "class_name": "VarianceScaling",
+            "config": {
+              "scale": 1,
+              "mode": "fan_avg",
+              "distribution": "uniform",
+              "seed": null
+            }
+          },
+          "kernel_regularizer": null,
+          "kernel_constraint": null,
+          "kernel_size": [
+            3,
+            3
+          ],
+          "strides": [
+            1,
+            1
+          ],
+          "padding": "same",
+          "data_format": "channels_last",
+          "dilation_rate": [
+            1,
+            1
+          ],
+          "activation": "sigmoid",
+          "use_bias": true,
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "bias_constraint": null,
+          "name": "stemnet_diag_mask",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "stemnet_diag_refine",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "stemnet_music_mask",
+        "class_name": "Conv2D",
+        "config": {
+          "filters": 1,
+          "kernel_initializer": {
+            "class_name": "VarianceScaling",
+            "config": {
+              "scale": 1,
+              "mode": "fan_avg",
+              "distribution": "uniform",
+              "seed": null
+            }
+          },
+          "kernel_regularizer": null,
+          "kernel_constraint": null,
+          "kernel_size": [
+            3,
+            3
+          ],
+          "strides": [
+            1,
+            1
+          ],
+          "padding": "same",
+          "data_format": "channels_last",
+          "dilation_rate": [
+            1,
+            1
+          ],
+          "activation": "sigmoid",
+          "use_bias": true,
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "bias_constraint": null,
+          "name": "stemnet_music_mask",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "stemnet_music_refine",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "stemnet_fx_mask",
+        "class_name": "Conv2D",
+        "config": {
+          "filters": 1,
+          "kernel_initializer": {
+            "class_name": "VarianceScaling",
+            "config": {
+              "scale": 1,
+              "mode": "fan_avg",
+              "distribution": "uniform",
+              "seed": null
+            }
+          },
+          "kernel_regularizer": null,
+          "kernel_constraint": null,
+          "kernel_size": [
+            3,
+            3
+          ],
+          "strides": [
+            1,
+            1
+          ],
+          "padding": "same",
+          "data_format": "channels_last",
+          "dilation_rate": [
+            1,
+            1
+          ],
+          "activation": "sigmoid",
+          "use_bias": true,
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "bias_constraint": null,
+          "name": "stemnet_fx_mask",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "stemnet_fx_refine",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "output_dialogue_stem",
+        "class_name": "Multiply",
+        "config": {
+          "name": "output_dialogue_stem",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "stemnet_input_mixture_spectrogram",
+              0,
+              0,
+              {}
+            ],
+            [
+              "stemnet_diag_mask",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "output_music_stem",
+        "class_name": "Multiply",
+        "config": {
+          "name": "output_music_stem",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "stemnet_input_mixture_spectrogram",
+              0,
+              0,
+              {}
+            ],
+            [
+              "stemnet_music_mask",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "output_effects_stem",
+        "class_name": "Multiply",
+        "config": {
+          "name": "output_effects_stem",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "stemnet_input_mixture_spectrogram",
+              0,
+              0,
+              {}
+            ],
+            [
+              "stemnet_fx_mask",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      }
+    ],
+    "input_layers": [
+      [
+        "stemnet_input_mixture_spectrogram",
+        0,
+        0
+      ]
+    ],
+    "output_layers": [
+      [
+        "output_dialogue_stem",
+        0,
+        0
+      ],
+      [
+        "output_music_stem",
+        0,
+        0
+      ],
+      [
+        "output_effects_stem",
+        0,
+        0
+      ]
+    ]
+  },
+  "keras_version": "tfjs-layers 4.22.0",
+  "backend": "tensor_flow.js"
+}

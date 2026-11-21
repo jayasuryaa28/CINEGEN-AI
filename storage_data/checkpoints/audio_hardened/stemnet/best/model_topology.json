@@ -1,0 +1,278 @@
+{
+  "class_name": "Model",
+  "config": {
+    "name": "STEMNET_Hardened",
+    "layers": [
+      {
+        "name": "stemnet_input",
+        "class_name": "InputLayer",
+        "config": {
+          "batch_input_shape": [
+            null,
+            null,
+            null,
+            1
+          ],
+          "dtype": "float32",
+          "sparse": false,
+          "name": "stemnet_input"
+        },
+        "inbound_nodes": []
+      },
+      {
+        "name": "conv2d_Conv2D4",
+        "class_name": "Conv2D",
+        "config": {
+          "filters": 8,
+          "kernel_initializer": {
+            "class_name": "VarianceScaling",
+            "config": {
+              "scale": 2,
+              "mode": "fan_in",
+              "distribution": "normal",
+              "seed": null
+            }
+          },
+          "kernel_regularizer": null,
+          "kernel_constraint": null,
+          "kernel_size": [
+            3,
+            3
+          ],
+          "strides": [
+            1,
+            1
+          ],
+          "padding": "same",
+          "data_format": "channels_last",
+          "dilation_rate": [
+            1,
+            1
+          ],
+          "activation": "relu",
+          "use_bias": true,
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "bias_constraint": null,
+          "name": "conv2d_Conv2D4",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "stemnet_input",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "conv2d_Conv2D5",
+        "class_name": "Conv2D",
+        "config": {
+          "filters": 8,
+          "kernel_initializer": {
+            "class_name": "VarianceScaling",
+            "config": {
+              "scale": 2,
+              "mode": "fan_in",
+              "distribution": "normal",
+              "seed": null
+            }
+          },
+          "kernel_regularizer": null,
+          "kernel_constraint": null,
+          "kernel_size": [
+            3,
+            3
+          ],
+          "strides": [
+            1,
+            1
+          ],
+          "padding": "same",
+          "data_format": "channels_last",
+          "dilation_rate": [
+            1,
+            1
+          ],
+          "activation": "relu",
+          "use_bias": true,
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "bias_constraint": null,
+          "name": "conv2d_Conv2D5",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "conv2d_Conv2D4",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "add_Add2",
+        "class_name": "Add",
+        "config": {
+          "name": "add_Add2",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "conv2d_Conv2D4",
+              0,
+              0,
+              {}
+            ],
+            [
+              "conv2d_Conv2D5",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "stemnet_in3",
+        "class_name": "Concatenate",
+        "config": {
+          "axis": -1,
+          "name": "stemnet_in3",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "stemnet_input",
+              0,
+              0,
+              {}
+            ],
+            [
+              "stemnet_input",
+              0,
+              0,
+              {}
+            ],
+            [
+              "stemnet_input",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "stemnet_softmax_masks",
+        "class_name": "Conv2D",
+        "config": {
+          "filters": 3,
+          "kernel_initializer": {
+            "class_name": "VarianceScaling",
+            "config": {
+              "scale": 1,
+              "mode": "fan_avg",
+              "distribution": "normal",
+              "seed": null
+            }
+          },
+          "kernel_regularizer": null,
+          "kernel_constraint": null,
+          "kernel_size": [
+            3,
+            3
+          ],
+          "strides": [
+            1,
+            1
+          ],
+          "padding": "same",
+          "data_format": "channels_last",
+          "dilation_rate": [
+            1,
+            1
+          ],
+          "activation": "softmax",
+          "use_bias": true,
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "bias_constraint": null,
+          "name": "stemnet_softmax_masks",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "add_Add2",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "stemnet_stems_out",
+        "class_name": "Multiply",
+        "config": {
+          "name": "stemnet_stems_out",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "stemnet_in3",
+              0,
+              0,
+              {}
+            ],
+            [
+              "stemnet_softmax_masks",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      }
+    ],
+    "input_layers": [
+      [
+        "stemnet_input",
+        0,
+        0
+      ]
+    ],
+    "output_layers": [
+      [
+        "stemnet_stems_out",
+        0,
+        0
+      ]
+    ]
+  },
+  "keras_version": "tfjs-layers 4.22.0",
+  "backend": "tensor_flow.js"
+}

@@ -1,0 +1,87 @@
+[
+  {
+    "name": "noisenet_conv1/kernel",
+    "shape": [
+      3,
+      3,
+      1,
+      8
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "noisenet_conv1/bias",
+    "shape": [
+      8
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "noisenet_dilated_c1/kernel",
+    "shape": [
+      3,
+      3,
+      8,
+      8
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "noisenet_dilated_c1/bias",
+    "shape": [
+      8
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "noisenet_dilated_c2/kernel",
+    "shape": [
+      3,
+      3,
+      8,
+      8
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "noisenet_dilated_c2/bias",
+    "shape": [
+      8
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "noisenet_attn/kernel",
+    "shape": [
+      1,
+      1,
+      8,
+      8
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "noisenet_attn/bias",
+    "shape": [
+      8
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "noisenet_mask_output/kernel",
+    "shape": [
+      3,
+      3,
+      8,
+      1
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "noisenet_mask_output/bias",
+    "shape": [
+      1
+    ],
+    "dtype": "float32"
+  }
+]

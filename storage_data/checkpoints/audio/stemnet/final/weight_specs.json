@@ -1,0 +1,138 @@
+[
+  {
+    "name": "stemnet_shared_c1/kernel",
+    "shape": [
+      3,
+      3,
+      1,
+      8
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "stemnet_shared_c1/bias",
+    "shape": [
+      8
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "stemnet_shared_c2/kernel",
+    "shape": [
+      3,
+      3,
+      8,
+      8
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "stemnet_shared_c2/bias",
+    "shape": [
+      8
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "stemnet_diag_refine/kernel",
+    "shape": [
+      3,
+      3,
+      8,
+      4
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "stemnet_diag_refine/bias",
+    "shape": [
+      4
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "stemnet_music_refine/kernel",
+    "shape": [
+      3,
+      3,
+      8,
+      4
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "stemnet_music_refine/bias",
+    "shape": [
+      4
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "stemnet_fx_refine/kernel",
+    "shape": [
+      3,
+      3,
+      8,
+      4
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "stemnet_fx_refine/bias",
+    "shape": [
+      4
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "stemnet_diag_mask/kernel",
+    "shape": [
+      3,
+      3,
+      4,
+      1
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "stemnet_diag_mask/bias",
+    "shape": [
+      1
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "stemnet_music_mask/kernel",
+    "shape": [
+      3,
+      3,
+      4,
+      1
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "stemnet_music_mask/bias",
+    "shape": [
+      1
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "stemnet_fx_mask/kernel",
+    "shape": [
+      3,
+      3,
+      4,
+      1
+    ],
+    "dtype": "float32"
+  },
+  {
+    "name": "stemnet_fx_mask/bias",
+    "shape": [
+      1
+    ],
+    "dtype": "float32"
+  }
+]

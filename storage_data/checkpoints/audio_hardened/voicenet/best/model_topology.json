@@ -1,0 +1,285 @@
+{
+  "class_name": "Model",
+  "config": {
+    "name": "VOICENET_Hardened",
+    "layers": [
+      {
+        "name": "voicenet_input",
+        "class_name": "InputLayer",
+        "config": {
+          "batch_input_shape": [
+            null,
+            null,
+            null,
+            1
+          ],
+          "dtype": "float32",
+          "sparse": false,
+          "name": "voicenet_input"
+        },
+        "inbound_nodes": []
+      },
+      {
+        "name": "conv2d_Conv2D6",
+        "class_name": "Conv2D",
+        "config": {
+          "filters": 8,
+          "kernel_initializer": {
+            "class_name": "VarianceScaling",
+            "config": {
+              "scale": 2,
+              "mode": "fan_in",
+              "distribution": "normal",
+              "seed": null
+            }
+          },
+          "kernel_regularizer": null,
+          "kernel_constraint": null,
+          "kernel_size": [
+            3,
+            3
+          ],
+          "strides": [
+            1,
+            1
+          ],
+          "padding": "same",
+          "data_format": "channels_last",
+          "dilation_rate": [
+            1,
+            1
+          ],
+          "activation": "relu",
+          "use_bias": true,
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "bias_constraint": null,
+          "name": "conv2d_Conv2D6",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "voicenet_input",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "conv2d_Conv2D7",
+        "class_name": "Conv2D",
+        "config": {
+          "filters": 8,
+          "kernel_initializer": {
+            "class_name": "VarianceScaling",
+            "config": {
+              "scale": 2,
+              "mode": "fan_in",
+              "distribution": "normal",
+              "seed": null
+            }
+          },
+          "kernel_regularizer": null,
+          "kernel_constraint": null,
+          "kernel_size": [
+            3,
+            3
+          ],
+          "strides": [
+            1,
+            1
+          ],
+          "padding": "same",
+          "data_format": "channels_last",
+          "dilation_rate": [
+            1,
+            1
+          ],
+          "activation": "relu",
+          "use_bias": true,
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "bias_constraint": null,
+          "name": "conv2d_Conv2D7",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "conv2d_Conv2D6",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "add_Add3",
+        "class_name": "Add",
+        "config": {
+          "name": "add_Add3",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "conv2d_Conv2D6",
+              0,
+              0,
+              {}
+            ],
+            [
+              "conv2d_Conv2D7",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "conv2d_Conv2D8",
+        "class_name": "Conv2D",
+        "config": {
+          "filters": 1,
+          "kernel_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "kernel_regularizer": null,
+          "kernel_constraint": null,
+          "kernel_size": [
+            3,
+            3
+          ],
+          "strides": [
+            1,
+            1
+          ],
+          "padding": "same",
+          "data_format": "channels_last",
+          "dilation_rate": [
+            1,
+            1
+          ],
+          "activation": "tanh",
+          "use_bias": true,
+          "bias_initializer": {
+            "class_name": "Zeros",
+            "config": {}
+          },
+          "bias_regularizer": null,
+          "activity_regularizer": null,
+          "bias_constraint": null,
+          "name": "conv2d_Conv2D8",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "add_Add3",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "multiply_Multiply1",
+        "class_name": "Multiply",
+        "config": {
+          "name": "multiply_Multiply1",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "voicenet_input",
+              0,
+              0,
+              {}
+            ],
+            [
+              "conv2d_Conv2D8",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "add_Add4",
+        "class_name": "Add",
+        "config": {
+          "name": "add_Add4",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "voicenet_input",
+              0,
+              0,
+              {}
+            ],
+            [
+              "multiply_Multiply1",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      },
+      {
+        "name": "voicenet_out",
+        "class_name": "Activation",
+        "config": {
+          "activation": "relu",
+          "name": "voicenet_out",
+          "trainable": true
+        },
+        "inbound_nodes": [
+          [
+            [
+              "add_Add4",
+              0,
+              0,
+              {}
+            ]
+          ]
+        ]
+      }
+    ],
+    "input_layers": [
+      [
+        "voicenet_input",
+        0,
+        0
+      ]
+    ],
+    "output_layers": [
+      [
+        "voicenet_out",
+        0,
+        0
+      ]
+    ]
+  },
+  "keras_version": "tfjs-layers 4.22.0",
+  "backend": "tensor_flow.js"
+}
