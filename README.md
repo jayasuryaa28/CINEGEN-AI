@@ -36,7 +36,7 @@ CINEGEN AI is an open-source media restoration engine built entirely in **pure J
 | **Perspective Rectification** | Screen corner detection & keystone trapezoid correction | Production Ready | **Integrated & Tested** |
 | **CINESYNC Timeline** | Video/audio PTS alignment with zero frame drift | Production Ready | **Integrated & Tested** |
 | **Audio Denoising** | Audience murmur, room tone, and mic hum suppression | Production Ready | **Integrated & Tested** (NOISENET) |
-| **Audio Separation** | 4-stem harmonic separation (dialogue, music, SFX) | Production Ready | **Integrated & Tested** (STEMNET) |
+| **Audio Separation** | 3-stem harmonic separation (dialogue, music, sound effects) | Production Ready | **Integrated & Tested** (STEMNET) |
 | **Production Video Upscaling**| High-throughput baseline upscaling | Production Ready | **Integrated & Tested** (FFmpeg Lanczos) |
 | **Camera Stabilization** | Handheld camera shake removal via optical flow | Implemented | **Implemented, Not Integrated** (Tested standalone) |
 | **Neural Super-Resolution** | 2x temporal super-resolution & detail enhancement | Experimental | **Experimental** (Tiling verified; pipeline wiring pending) |
@@ -69,8 +69,8 @@ Comprehensive visual comparison between degraded recording, FFmpeg baseline upsc
 ### Quick Start
 ```bash
 # Clone the repository
-git clone https://github.com/cinegen-ai/cinegen-ai.git
-cd cinegen-ai
+git clone https://github.com/jayasuryaa28/CINEGEN-AI.git
+cd CINEGEN-AI
 
 # Install dependencies
 npm install

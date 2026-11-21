@@ -17,8 +17,8 @@ Thank you for your interest in contributing to CINEGEN AI! We welcome bug fixes,
 
 ```bash
 # Clone the repository
-git clone https://github.com/cinegen-ai/cinegen-ai.git
-cd cinegen-ai
+git clone https://github.com/jayasuryaa28/CINEGEN-AI.git
+cd CINEGEN-AI
 
 # Install dependencies
 npm install

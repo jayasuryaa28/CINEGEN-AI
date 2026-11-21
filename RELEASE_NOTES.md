@@ -18,7 +18,7 @@ Our multi-scale residual CNN achieves **+7.36 dB PSNR** over standard sharpening
 
 ### 4. NOISENET & STEMNET Audio AI
 - **NOISENET**: +1.66 dB SDR gain suppressing audience noise, mic hiss, and electrical hum while preserving speech intelligibility.
-- **STEMNET**: 4-stem harmonic separation into dialogue, music, Foley, and ambience with 50.0 dB energy conservation.
+- **STEMNET**: 3-stem harmonic separation into dialogue, music, and sound effects with 50.0 dB energy conservation.
 
 ### 5. CINESYNC & Dual-Audio Fallback
 Guarantees 0.00 ms audio-video presentation timestamp offset across variable and constant frame rate inputs. Every export bundles the enhanced audio as primary track 0 and the bit-exact original audio as track 1 for instant comparison in any player.
@@ -34,8 +34,8 @@ Guarantees 0.00 ms audio-video presentation timestamp offset across variable and
 ## Upgrade & Installation
 
 ```bash
-git clone https://github.com/cinegen-ai/cinegen-ai.git
-cd cinegen-ai
+git clone https://github.com/jayasuryaa28/CINEGEN-AI.git
+cd CINEGEN-AI
 npm install
 cp .env.example .env
 npm run build

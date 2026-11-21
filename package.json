@@ -1,6 +1,6 @@
 {
   "name": "cinegen-ai",
-  "version": "1.0.0",
+  "version": "0.1.0-alpha",
   "license": "Apache-2.0",
   "description": "CINEGEN AI — Open-source JavaScript AI video and audio processing platform",
   "scripts": {

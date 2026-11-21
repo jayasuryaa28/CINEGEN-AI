@@ -18,7 +18,7 @@ All neural models included in CINEGEN AI were engineered, initialized, and train
 | **CINEVISION** | Screen detection, perspective & blur estimation | `storage_data/checkpoints/cinevision/best` | Apache 2.0 | Permitted |
 | **CINEFRAME** | Video super-resolution & temporal restoration | `storage_data/checkpoints/cineframe/best` | Apache 2.0 | Permitted |
 | **NOISENET** | Cinema audience & microphone denoising | `storage_data/checkpoints/audio_hardened/noisenet/best` | Apache 2.0 | Permitted |
-| **STEMNET** | 4-stem harmonic audio source separation | `storage_data/checkpoints/audio_hardened/stemnet/best` | Apache 2.0 | Permitted |
+| **STEMNET** | 3-stem harmonic audio source separation (Dialogue, Music, Sound Effects) | `storage_data/checkpoints/audio_hardened/stemnet/best` | Apache 2.0 | Permitted |
 | **ECHONET** (Bypassed) | Room acoustic dereverberation | `storage_data/checkpoints/audio_hardened/echonet/best` | Apache 2.0 | Permitted |
 | **VOICENET** (Bypassed) | Dialogue formant clarity enhancement | `storage_data/checkpoints/audio_hardened/voicenet/best` | Apache 2.0 | Permitted |
 
