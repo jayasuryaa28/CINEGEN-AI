@@ -43,20 +43,11 @@ CINEGEN AI is an open-source media restoration engine built entirely in **pure J
 
 ---
 
-## 3. Visual Results & Comparisons
+## 3. Web Application Interface
 
-### Screen Corner Detection & Perspective Correction (Phase 13.2)
-CINEVISION detects audience-angle keystone distortions and applies 4-corner homography rectification to restore rectangular projection geometry:
+![CINEGEN AI Dashboard](docs/screenshots/ui_dashboard.png)
 
-| Sample | Original Distorted Angle | Rectified & Perspective Corrected |
-| :--- | :---: | :---: |
-| **RW-02 (Side Angle)** | ![RW-02 Before](docs/screenshots/rw02_perspective_before.jpg) | ![RW-02 After](docs/screenshots/rw02_perspective_after.jpg) |
-| **RW-03 (Front Row Keystone)** | ![RW-03 Before](docs/screenshots/rw03_perspective_before.jpg) | ![RW-03 After](docs/screenshots/rw03_perspective_after.jpg) |
-
-### Real-World Pipeline Side-by-Side Verification
-Comprehensive visual comparison between degraded recording, FFmpeg baseline upscaling, and CINEFRAME restored output:
-
-![Real-World Comparison RW-02](docs/screenshots/rw02_side_by_side.png)
+*CINEGEN AI running locally at `http://localhost:3000` with real-time video upload, CINEVISION perspective rectification, NOISENET/STEMNET audio DSP controls, and dual-audio export pipeline.*
 
 ---
 
