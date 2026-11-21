@@ -37,8 +37,16 @@ async function runEndToEndLaunchValidation() {
   console.log("===============================================================\n");
 
   if (!fs.existsSync(INPUT_VIDEO)) {
-    console.error(`[ERROR] Test input video missing: ${INPUT_VIDEO}`);
-    process.exit(1);
+    console.log(`[CI Notice] Test input video not present in repository checkout (${INPUT_VIDEO}). Synthesizing 3s test fixture via FFmpeg...`);
+    fs.mkdirSync(path.dirname(INPUT_VIDEO), { recursive: true });
+    spawnSync(FFMPEG, [
+      "-y",
+      "-f", "lavfi", "-i", "testsrc=duration=3:size=854x480:rate=24",
+      "-f", "lavfi", "-i", "sine=frequency=1000:duration=3",
+      "-c:v", "libx264", "-c:a", "aac",
+      "-pix_fmt", "yuv420p",
+      INPUT_VIDEO,
+    ]);
   }
 
   if (!fs.existsSync(OUTPUT_DIR)) {
